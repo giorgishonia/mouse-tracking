@@ -1,0 +1,32 @@
+body{
+    background-color: rgb(25 25 25);
+    height: 102vh;
+    width: 102vw;
+    margin: 0;
+    overflow: hidden;
+}
+
+#movableDiv {
+    width: 75px;
+    height: 75px;
+    background-color: white;
+    border-radius: 100%;
+    position: relative;
+    transform: translate(-60%, -60%);
+    opacity: 0;
+    user-select: none;
+    pointer-events: none;
+    transition: 100ms;
+}
+
+body:hover #movableDiv{
+    opacity: 1;
+    transition: 100ms;
+}
+
+body:active #movableDiv{
+    transform: scale(1.6);
+    transition: 200ms;
+    background-color: gray;
+    transform-origin: translate(-50%, -50%);
+}
